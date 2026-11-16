@@ -3,8 +3,8 @@
   "settings": [
     {
       "id": "units",
-      "name": "Units",
-      "description": "Choose the unit in which the time lag between consecutive locations and the median time lag per track are calculated.",
+      "name": "Units of the plots",
+      "description": "Choose the unit in which the time lags and the median time lag are displayed in the histograms and violin plots. This setting only affects the plots: the columns 'timelag' (event data) and 'median_timelag' (track data) added to the output data are always in seconds.",
       "defaultValue": "min",
       "type": "RADIOBUTTONS",
       "options": [
@@ -16,6 +16,13 @@
         { "value": "month", "displayText": "Month" },
         { "value": "years", "displayText": "Years" }
       ]
+    },
+    {
+      "id": "max_lag",
+      "name": "Maximum time lag shown in the plots",
+      "description": "Optional. Maximum time lag, in the unit selected in 'Units of the plots'. Time lags above this value are not shown in the histograms and violin plots, so that a few long gaps do not hide the distribution of the frequent, shorter time lags. These time lags are NOT removed from the data: the columns 'timelag' and 'median_timelag' and the medians shown in the plots always include all time lags. Each plot states how many time lags are not shown. Leave empty to plot all time lags.",
+      "defaultValue": null,
+      "type": "DOUBLE"
     }
   ],
   "dependencies": {

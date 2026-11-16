@@ -1,3 +1,4 @@
 {
-  "units": "h"
+  "units": "h",
+  "max_lag": 50
 }
